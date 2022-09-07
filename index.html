@@ -1,29 +1,37 @@
-<!--그동안 html 태그에 같이 넣은 건 인라인 형식-->
-<!--인라인은 코드 가독성을 해침 + 불필요한 중복 발생. 따로 빼주기-->
-<!-- CSS 코드 규칙-->
-<!--1. 선택자와 여는 중괄호는 같은 줄-->
-<!--2. 한줄 당 CSS속성 + 해당 값 1개씩만 구성-->
-<!--3. 모든 줄 세미콜론으로 끝남-->
-<!--4. 줄 들여쓰기-->
-<!-- 닫는 중괄호는 들여쓰기 없이 별도의 줄에 넣기-->
-<style>
-  h1 {
-    font-family: sans-serif;
-    text-align: center;
-    color: rgb(83, 75, 75);
-  }
-  p {
-    font-family: sans-serif;
-    text-align: center;
-    color: rgb(83, 75, 75);
-  }
-</style>
+<!-- 웹 페이지 기본 구조-->
+<!--눈에 보이는 콘텐츠/ 눈에 안보이는 메타 데이터(브라우저 영향 주는데 사용자에게는 안보임)-->
+<!--콘텐츠 : body 요소로 래핑 / 메타데이터: head 요소(스타일,타이틀 요소(검색엔진) 설정)로 래핑-->
+<!--body요소 + head 요소 : html 요소로 래핑-->
+<!--html 요소: DOCTYPE 요소(사용중인 HTML 버전을 브라우저에게 알려줌)로 래핑-->
+<!--누락될 경우 브라우저 자동 추가-> 그러나 꼭 입력해주자 기본임-->
 
-<h1>Sunny' Challenge for Wednesday, September 7th</h1>
-<p>
-  Learn about the basics of web development - specifically dive into HTML & CSS.
-</p>
-<p>
-  I'll achieve this goal by diving into
-  <a href="https://www.google.co.kr"> more learning resources. </a>
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        font-family: sans-serif;
+        text-align: center;
+        color: rgb(83, 75, 75);
+      }
+      p {
+        font-family: sans-serif;
+        text-align: center;
+        color: rgb(83, 75, 75);
+      }
+    </style>
+    <title>My Daily Challenge</title>
+    <!-- title은 화면 출력 영향 x 탭과 검색 엔진에 사용됨-->
+  </head>
+  <body>
+    <h1>Sunny' Challenge for Wednesday, September 7th</h1>
+    <p>
+      Learn about the basics of web development - specifically dive into HTML &
+      CSS.
+    </p>
+    <p>
+      I'll achieve this goal by diving into
+      <a href="https://www.google.co.kr"> more learning resources. </a>
+    </p>
+  </body>
+</html>
