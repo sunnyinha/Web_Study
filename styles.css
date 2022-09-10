@@ -1,0 +1,18 @@
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(83, 75, 75);
+}
+p {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(83, 75, 75);
+  background-color: blanchedalmond;
+}
+a {
+  color: rgb(31, 215, 145);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

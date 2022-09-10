@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      h1 {
-        font-family: sans-serif;
-        text-align: center;
-        color: rgb(83, 75, 75);
-      }
-      p {
-        font-family: sans-serif;
-        text-align: center;
-        color: rgb(83, 75, 75);
-        background-color: blanchedalmond;
-      }
-      a {
-        color: rgb(31, 215, 145);
-        text-decoration: none;
-      }
-      /*가상 클래스 선택자: 동적인 스타일 줌 (ex) :hover : 커서 가져가면 변함) */
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <!--css 파일 분리(가독성 up, 코드 유지 보수 up)-->
+    <!--문제: 브라우저가 자동으로 css 파일과 연동 안해줌-->
+    <!--메타 HTML 요소인 LINK를 사용하여 다른 파일과의 링크(연결) 생성-->
+    <!--Link 특징1: 빈요소임(시작태그와 종료태그 사이에 내용 x , 종료태그x)-->
+    <!--Link 특징2: 속성만으로 구성/ href 속성 필요(경로는 상대경로)/ref 속성(링크 유형 정의(이유: 브라우저는 파일이 css인걸 모름) 필요-->
+    <link href="styles.css" rel="stylesheet" />
+
     <title>My Daily Challenge</title>
   </head>
   <body>
