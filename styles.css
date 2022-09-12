@@ -16,3 +16,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/*ID 선택자 사용 규칙*/
+/*영향 받을 요소의 ID 앞에 해시(#)기호를 붙여준다 */
+/*특정한 부분 선택을 위함!(선택 부분은 유일해야함)*/
+#todays-challenge {
+  color: rgb(193, 182, 227);
+}
