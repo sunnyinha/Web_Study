@@ -1,24 +1,33 @@
 h1 {
-  /*새로운 폰트 사용, fallback 폰트(앞에 폰트 없으면 대신 사용할 기본폰트)*/
   font-family: "Oswald", sans-serif;
-  text-align: center;
   color: rgb(83, 75, 75);
 }
 p {
   font-family: "Fira Sans", sans-serif;
-  text-align: center;
   color: rgb(83, 75, 75);
-  background-color: blanchedalmond;
 }
 a {
-  color: rgb(31, 215, 145);
+  color: rgb(38, 118, 245);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 #todays-challenge {
-  color: rgb(193, 182, 227);
+  color: rgb(255, 94, 0);
   font-weight: bold;
   font-size: 40px;
+}
+/*img 유형 선택자*/
+img /*body의 자식 요소*/ {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px; /*모양결정*/
+  text-align: center; /*적용 안됨- text에만 적용되므로*/
+}
+body /*img의 부모요소"
+/*body 안 전체를 text로 간주하여 img까지 text로 간주 후 중앙배치됨*/ {
+  text-align: center;
+  background-color: rgb(233, 215, 207);
+  margin: 50px; /*요소 주변 간격 넣기*/
 }
