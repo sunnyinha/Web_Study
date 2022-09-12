@@ -1,10 +1,11 @@
 h1 {
-  font-family: sans-serif;
+  /*새로운 폰트 사용, fallback 폰트(앞에 폰트 없으면 대신 사용할 기본폰트)*/
+  font-family: "Oswald", sans-serif;
   text-align: center;
   color: rgb(83, 75, 75);
 }
 p {
-  font-family: sans-serif;
+  font-family: "Fira Sans", sans-serif;
   text-align: center;
   color: rgb(83, 75, 75);
   background-color: blanchedalmond;
@@ -18,10 +19,6 @@ a:hover {
 }
 #todays-challenge {
   color: rgb(193, 182, 227);
-  /*텍스트 굵기(두께) : 숫자로 놓을수도 있고 normal, bold 등으로 설정가능*/
   font-weight: bold;
-  /*텍스트 크기 : 절대적 크기(px)- 해상도 영향만 받음, 상대적 크기(rem, %)*/
   font-size: 40px;
-  /*+@ html은 콘텐츠를 설명하고 적절한 의미부여를 보여주는 거고 
-  h1 내용이 p 내용보다 크기가 작을수도 있다. 이러한 스타일 관리는 css의 역할이다.*/
 }
