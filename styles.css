@@ -7,7 +7,7 @@ p {
   color: rgb(83, 75, 75);
 }
 a {
-  color: rgb(38, 118, 245);
+  color: rgba(0, 64, 255, 0.499);
   text-decoration: none;
 }
 a:hover {
@@ -18,16 +18,14 @@ a:hover {
   font-weight: bold;
   font-size: 40px;
 }
-/*img 유형 선택자*/
-img /*body의 자식 요소*/ {
+img {
   width: 200px;
   height: 200px;
-  border-radius: 100px; /*모양결정*/
-  text-align: center; /*적용 안됨- text에만 적용되므로*/
+  border-radius: 100px;
+  text-align: center;
 }
-body /*img의 부모요소"
-/*body 안 전체를 text로 간주하여 img까지 text로 간주 후 중앙배치됨*/ {
+body {
   text-align: center;
   background-color: rgb(233, 215, 207);
-  margin: 50px; /*요소 주변 간격 넣기*/
+  margin: 50px;
 }
