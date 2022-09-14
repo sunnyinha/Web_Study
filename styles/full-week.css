@@ -1,0 +1,9 @@
+/* ol이 li보다 부모(li 포함하는 관계)임*/
+/* 부모의 영향 자식이 받고 자식은 재정의를 할 수 있음*/
+ol {
+  list-style: none; /*style 적어주면 자식인 li에 적용*/
+}
+li {
+  list-style: square; /*재정의함*/
+  color: rgb(0, 128, 255);
+}
