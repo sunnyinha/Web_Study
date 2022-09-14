@@ -1,9 +1,31 @@
-/* ol이 li보다 부모(li 포함하는 관계)임*/
-/* 부모의 영향 자식이 받고 자식은 재정의를 할 수 있음*/
+/*CSS 박스 모델 이해 후 적용*/
+h1 {
+  font-size: 48px;
+  color: rgb(59, 80, 10);
+}
+a {
+  padding: 12px;
+  background-color: rgb(219, 109, 35);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 109, 35);
+  border-radius: 4px;
+  font-size: 24px;
+}
+a:hover {
+  background-color: rgb(0, 255, 149);
+  text-decoration: none;
+}
+
 ol {
-  list-style: none; /*style 적어주면 자식인 li에 적용*/
+  list-style: none;
+  width: 500px;
+  /*왼쪽 오른쪽에 자동으로 크기 설정 후 padding 없애면 가운데 정렬가능*/
+  margin: 36px auto 0 auto;
+  padding: 0;
 }
 li {
-  list-style: square; /*재정의함*/
-  color: rgb(0, 128, 255);
+  padding: 16px;
+  margin: 32px;
+  background-color: rgb(255, 196, 0);
+  border-radius: 6px;
 }
