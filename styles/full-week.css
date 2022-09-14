@@ -3,12 +3,6 @@ h1 {
   color: rgb(59, 80, 10);
 }
 
-/*ID 선택자 사용*/
-/* #description {
-  margin-bottom: 36px;
-} */
-
-/*자손 결합자 사용*/
 header p {
   margin-bottom: 36px;
 }
@@ -19,6 +13,8 @@ a {
   border: 1px solid rgb(219, 109, 35);
   border-radius: 4px;
   font-size: 24px;
+  display: inline-block; /*여백과 패딩 적용 가능(이 과정을 통해 헤더 부분에 포함됨! - 인라인 요소의 단점 극복)*/
+  margin: 12px 0;
 }
 a:hover {
   background-color: rgb(0, 255, 149);
