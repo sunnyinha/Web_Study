@@ -5,6 +5,16 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 100px;
+  outline: 5px solid black;
+  z-index: 1;
+  position: relative;
+}
+span {
+  outline: 5px solid black;
+  background-color: #ffd23d;
+  padding: 100px 100px 150px 100px;
+  margin: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
 }
 
 #todays-challenge {

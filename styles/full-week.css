@@ -1,20 +1,24 @@
+header {
+  margin-bottom: 64px;
+}
 h1 {
   font-size: 48px;
   color: rgb(59, 80, 10);
+  margin: 0;
+}
+#description {
+  margin: 12px 0;
 }
 
-header p {
-  margin-bottom: 36px;
-}
 a {
-  padding: 12px;
+  padding: 12px 48px;
   background-color: rgb(219, 109, 35);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(219, 109, 35);
   border-radius: 4px;
   font-size: 24px;
-  display: inline-block; /*여백과 패딩 적용 가능(이 과정을 통해 헤더 부분에 포함됨! - 인라인 요소의 단점 극복)*/
-  margin: 12px 0;
+  display: inline-block;
+  margin: 0;
 }
 a:hover {
   background-color: rgb(0, 255, 149);
@@ -31,6 +35,8 @@ li {
   margin: 32px;
   background-color: rgb(255, 196, 0);
   border-radius: 6px;
+  /*박스 그림자 효과*/
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
