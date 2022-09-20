@@ -13,14 +13,21 @@
     <title>My Daily Challenge</title>
   </head>
   <body>
-    <img src="images/tropy.png" alt="A tropy" />
-    <h1>
-      <span> Sunny' Challenge for Wednesday, September 7th</span>
-    </h1>
-    <p id="todays-challenge">
-      Learn about the basics of web development - specifically dive into HTML &
-      CSS.
-    </p>
-    <p>Explore the <a href="full-week.html"> full week </a></p>
+    <!--html 구조 잡기 / main 주요내용, footer 서브내용-> 결국 의미 없는 내용 -> div로 대체-->
+    <main>
+      <div id = "main-section">
+      <img src="images/tropy.png" alt="A tropy" />
+      <!--span : html 요소인데 의미가 없는 인라인 요소-->
+      <!--div : html 요소인데 의미가 없는 블록 요소-->
+      <h1>Sunny' Challenge for <span>Wednesday, September 7th</span></h1>
+      <p id="todays-challenge">
+        Learn about the basics of web development - specifically dive into HTML
+        & CSS.
+      </p>
+    </main>
+  </div>
+    <div id="footer" >
+      <p>Explore the <a href="full-week.html"> full week </a></p>
+    </div>
   </body>
 </html>
