@@ -35,7 +35,9 @@ a {
 }
 ul {
   list-style: none;
-  line-height: 2em;
+  /**line-height는 콘텐츠 영역 크기를 증가시켜 
+  글자 앞에 border의 크기가 글자보다 더 길었던 거임**/
+  margin: 14px 0px;
 }
 span {
   background-color: rgb(247, 227, 163);
@@ -52,7 +54,10 @@ em {
 
 .point {
   border-left-style: solid;
-  border-left-width: 5px;
+  border-left-width: 7px;
   padding-left: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 16px 0;
   color: rgb(247, 227, 163);
 }
