@@ -3,19 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>HTML& CSS Basics Summary</title>
-    <link href="shared.css" rel="stylesheet" />
+    <!--글꼴 추가-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/shared.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>HTML & CSS Basics Summary</h1>
-    <img src="html-css.png" alt="css&html mark" />
+    <header>
+      <h1>HTML & CSS Basics Summary</h1>
+      <img src="images/html-css.png" alt="css&html mark" />
+    </header>
     <main>
       <section>
         <h2>HTML Summmary</h2>
         <p>
           HTML(HyperText Markup Language) is used to define our page content,
           structure and meaning. <br />
-          You <em>don't</em> use it for styling purposes. Use CSS for that
-          instead!
+          You <strong>don't</strong> use it for styling purposes. Use CSS for
+          that instead!
         </p>
         <ul>
           <div>
@@ -37,7 +46,10 @@
           </li>
         </ul>
         Learn more about all available HTML elements on
-        <span>the MDN HTML element reference</span>.
+        <a href="https://developer.mozilla.org/ko/docs/Web/HTML"
+          >the MDN HTML element reference</a
+        >
+        .
       </section>
       <section>
         <h2>CSS Summary</h2>
@@ -58,14 +70,18 @@
             and the "box model" should be understood.
           </li>
         </ul>
-        Learn more about all availrable CSS properties and values on<span>
-          the MDN CSS property reference</span
+        Learn more about all availrable CSS properties and values on
+        <a href="https://developer.mozilla.org/ko/docs/Web/CSS"
+          >the MDN CSS property reference</a
         >.
       </section>
     </main>
     <footer>
       <p>
-        <a href="https://developer.mozilla.org/ko/">Read more information</a>
+        <!-- target = "_blank" -> 새탭에서 열기-->
+        <a href="pdfs/html-css-basics-summary.pdf" target="_blank"
+          >Download PDF Summary</a
+        >
       </p>
       <p>Sunny studing web</p>
     </footer>

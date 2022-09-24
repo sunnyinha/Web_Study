@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  /*글꼴 추가*/
+  font-family: "Roboto", sans-serif;
   background-color: rgb(220, 206, 232);
 }
 h1 {
@@ -8,10 +10,12 @@ h1 {
   font-size: 60px;
   font-weight: bold;
 }
-img {
+header {
+  padding: 32px;
+}
+header img {
   width: 400px;
-  height: 220px;
-  margin: 0 0 40px 0;
+  /*넓이 정하면 높이 자동 설정해줘서 안적어도 됨*/
 }
 main {
   width: 1150px;
@@ -24,20 +28,28 @@ main {
   margin: 0 auto;
   text-align: left;
 }
-a {
-  margin: 20px 0px;
-  padding: 20px;
-  background-color: rgb(254, 195, 0);
+body a {
+  padding: 2px 4px;
+  color: rgba(43, 0, 152, 0.74);
+  background-color: rgb(255, 235, 169);
   text-decoration: none;
+  border-radius: 5px;
   font-size: 30px;
   font-weight: bold;
   display: inline-block;
 }
+a:hover,
+a:active {
+  background-color: rgb(231, 193, 0);
+}
 ul {
   list-style: none;
-  /**line-height는 콘텐츠 영역 크기를 증가시켜 
-  글자 앞에 border의 크기가 글자보다 더 길었던 거임**/
+  padding: 0;
+}
+li {
   margin: 14px 0px;
+  padding-left: 10px;
+  border-left: 5px solid transparent;
 }
 span {
   background-color: rgb(247, 227, 163);
@@ -47,17 +59,26 @@ span {
   display: inline-block;
   padding: 0 10px;
 }
-em {
-  font-style: normal;
-  font-weight: bold;
+
+footer p {
+  color: rgb(104, 3, 211);
+  margin-top: 30px;
 }
 
 .point {
-  border-left-style: solid;
-  border-left-width: 7px;
-  padding-left: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 16px 0;
+  border-left: 5px solid rgb(247, 227, 163);
   color: rgb(247, 227, 163);
+  margin: 16px 0;
+}
+
+footer a {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: rgb(231, 193, 0);
+  color: rgb(51, 9, 97);
+}
+
+footer a:hover,
+footer a:active {
+  background-color: rgb(197, 158, 31);
 }
