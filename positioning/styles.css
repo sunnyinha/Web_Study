@@ -28,8 +28,16 @@ p {
   /**position: static;**/
 
   /**기본 문서 흐름 고정(본인 기준 상하좌우 이동 o)**/
-  position: relative;
-  right: 20px;
+  /* position: relative; */
+  /* right: 20px; */
+
+  /**기본 문서 흐름 벗어남(전체 페이지에서 고정)**/
+  /* position: absolute; */
+  /* top: 0; */
+
+  /**기본 문서 흐름 벗어남(보이는 영역(뷰포트)에서 고정)**/
+  position: fixed;
+  top: 0;
 }
 
 #three {
