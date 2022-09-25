@@ -1,17 +1,10 @@
 #container {
   background-color: rgb(82, 23, 81);
   padding: 10px;
-  /**flex 박스 : 박스 안의 요소들 정렬, 배치 관리
-  (관리될 요소들을 포함하는 박스(flex 컨테이너)를 정해야 함) **/
   display: flex;
-  /**배치 방향 
- 용어 // 메인축: 아이템 배치된 방향 (교차축: 메인축 수직) **/
   flex-direction: row;
-  /**한줄에 배치 못할 시 줄 바꿈 여부**/
   flex-wrap: wrap;
-  /**수직 방향 정렬 방식**/
   align-items: center;
-  /*수평 방향 정렬 방식*/
   justify-content: space-between;
 }
 
@@ -27,9 +20,12 @@ ul {
   width: 250px;
   margin: 10px;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 li {
   background-color: rgb(238, 212, 192);
   width: 100px;
+  text-align: right;
 }
