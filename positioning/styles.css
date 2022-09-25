@@ -1,0 +1,37 @@
+div {
+  background-color: #c7c7c7;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  color: black;
+  padding: 50px;
+  margin: 0;
+}
+
+#container {
+  background-color: #521751;
+}
+
+#container p {
+  color: white;
+}
+
+#one {
+  background-color: #943092;
+}
+
+#two {
+  background-color: #c95bc7;
+  /**기본 문서 흐름 고정(상하좌우 이동 x)**/
+  /**position: static;**/
+
+  /**기본 문서 흐름 고정(본인 기준 상하좌우 이동 o)**/
+  position: relative;
+  right: 20px;
+}
+
+#three {
+  background-color: #dd61db;
+}
