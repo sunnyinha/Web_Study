@@ -24,20 +24,15 @@ p {
 
 #two {
   background-color: #c95bc7;
-  /**기본 문서 흐름 고정(상하좌우 이동 x)**/
-  /**position: static;**/
-
-  /**기본 문서 흐름 고정(본인 기준 상하좌우 이동 o)**/
-  /* position: relative; */
-  /* right: 20px; */
-
-  /**기본 문서 흐름 벗어남(전체 페이지에서 고정)**/
-  /* position: absolute; */
-  /* top: 0; */
-
-  /**기본 문서 흐름 벗어남(보이는 영역(뷰포트)에서 고정)**/
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  /**너비 + 테두리, 안쪽 여백 따로 포함 너비 계산**/
+  /* box-sizing: content-box; */
+  /**총 너비 고정 테두리, 안쪽 여백을 너비 콘텐츠 영역에서 포함 계신**/
+  /**참고: https://developer.mozilla.org/ko/docs/Web/CSS/box-sizing*/
+  box-sizing: border-box;
 }
 
 #three {
