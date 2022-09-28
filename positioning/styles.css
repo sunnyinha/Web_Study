@@ -28,10 +28,6 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  /**너비 + 테두리, 안쪽 여백 따로 포함 너비 계산**/
-  /* box-sizing: content-box; */
-  /**총 너비 고정 테두리, 안쪽 여백을 너비 콘텐츠 영역에서 포함 계신**/
-  /**참고: https://developer.mozilla.org/ko/docs/Web/CSS/box-sizing*/
   box-sizing: border-box;
 }
 

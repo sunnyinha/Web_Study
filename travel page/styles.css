@@ -44,3 +44,31 @@
 #hero-content a:hover {
   background-color: rgb(255, 228, 0);
 }
+
+#destinations {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.destination {
+  margin: 0 20px;
+}
+
+.destination img {
+  height: 200px;
+  /*너비는 그림마다 달라 통일을 위해 
+   1. 숫자로 고정
+   2. %로 고정
+  중에서 1은 웹 페이지의 크기가 달라지면 보기 어려울 수 있어
+  2번으로 확정
+  */
+  width: 100%;
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  border-radius: 10px;
+  /* 그림의 종횡비를 맞추면서 축소를 통해 컨테이너 크기 안에 조율(여백이 생길 수 있음) => 그림 안뭉개짐
+  object-fit: contain; */
+  /* 그림의 종횡비를 맞추면서 확대를 통해 컨테이너 크기 안에 조율(그림 쪼끔 잘림) */
+  object-fit: cover;
+}
