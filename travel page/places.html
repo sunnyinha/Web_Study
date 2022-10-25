@@ -6,8 +6,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="places.css" />
     <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="places.css" /> <!-- 참조 순서-->
     <title>Travel Goals</title>
   </head>
 </html>
@@ -23,8 +23,22 @@
       </ul>
     </nav>
   </header>
-  <main></main>
-</body>
+  <main>
+    <ul>
+      <li>
+        <img src="/travel page/images/places/barcelona.jpg" alt="City of Barcelona">
+        <div class="item-content">
+          <h2>Barcelona</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nemo blanditiis rem non officia incidunt, odio, nostrum minima eos laboriosam voluptatibus veniam expedita? Possimus ut neque natus....
+          </p>
+        <div class="actions"> <!-- div 내부에 안넣어주면 옆으로 병렬됨 주의-->
+          <a href="https://en.wikipedia.org/wiki/Barcelona">Explore</a>
+        </div>
+      </div>
+      </li>
+    </ul>
+  </main>
 <footer>
   <ul>
     <li>
