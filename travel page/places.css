@@ -2,11 +2,20 @@ body {
   background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
   color: rgb(77, 77, 77);
 }
+#page-logo a {
+  color: rgb(183, 240, 240);
+}
 
 header {
   position: static;
 }
-
+header a {
+  color: rgb(183, 240, 240);
+}
+header nav a:hover {
+  background-color: rgb(183, 240, 240);
+  color: rgb(77, 77, 77);
+}
 main ul {
   width: 1200px;
   margin: 0 auto 48px auto;
@@ -37,6 +46,9 @@ main li img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.item-content h2 {
+  margin: 0px;
 }
 
 .actions {
