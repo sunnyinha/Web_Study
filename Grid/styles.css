@@ -27,8 +27,7 @@ li {
   background-color: yellow;
 } */
 
-li:nth-of-type(3) {
-  background-color: yellow;
-  grid-column: 1 / span 3; /*grid-column: 시작/ 끝 */
+li:nth-of-type(1) {
+  grid-column: 1 / span 4; /*grid-column: 시작/ 끝 */
   /*span: 몇개의 열 차지할 것인가*/
 }
