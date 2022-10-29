@@ -1,0 +1,34 @@
+main {
+  background-color: rgb(82, 23, 81);
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
+}
+
+ul {
+  background-color: rgb(250, 146, 63);
+  list-style: none;
+  width: 800px;
+  margin: 10px auto;
+  padding: 10px;
+  display: grid; /*그리드 적용*/
+  grid-template-columns: 1fr 1fr; /*한줄 공간 쪼개기*/
+  gap: 100px 200px; /*그리드 사이 공간*/
+}
+
+li {
+  background-color: rgb(238, 212, 192);
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+}
+
+/* li:first-of-type {
+  background-color: yellow;
+} */
+
+li:nth-of-type(3) {
+  background-color: yellow;
+  grid-column: 1 / span 3; /*grid-column: 시작/ 끝 */
+  /*span: 몇개의 열 차지할 것인가*/
+}
