@@ -14,13 +14,30 @@ main ul {
 main li {
   display: flex;
   background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden; /*컨테이너 밖에 넘친 부분 조율*/
 }
 
 main li img {
   width: 300px;
-  height: 200px;
+  object-fit: cover;
+}
+
+main div {
+  display: flex;
+  flex-direction: row;
 }
 
 .item-content {
   padding: 24px; /*글자 옆에 여백 넣어주기*/
+  color: rgb(77, 77, 77);
+}
+.actions a {
+  text-decoration: none;
+  color: rgb(11, 140, 205);
+}
+.actions a:hover {
+  background-color: rgb(144, 184, 204);
+  border-radius: 6px;
 }
