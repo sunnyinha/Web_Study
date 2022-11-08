@@ -1,8 +1,7 @@
 body {
   background-color: rgb(31, 30, 30);
-  margin: 8rem;
+  font-family: "Fira Sans", sans-serif;
 }
-
 form {
   width: 30rem;
   margin: 3rem auto;
@@ -11,14 +10,44 @@ form {
   border-radius: 6px;
 }
 
+label {
+  margin-bottom: 0.5rem;
+  display: block; /*인라인 요소라 margin-bottom이 적용이 안되서 바꿔줌*/
+}
+
 input {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
   box-sizing: border-box;
   /*box-sizing 종류 중 content-box로 하면 width크기가 안에 콘텐츠까지, width크기가 전체 크기까지 영향*/
+  font: inherit;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 0.25rem;
+  color: rgb(81, 79, 79);
 }
 
+/*입력이 포커스 되었을 때*/
+input:focus {
+  background-color: rgb(221, 234, 248);
+  color: rgb(111, 178, 249);
+  border-color: rgb(111, 178, 249);
+}
 button {
   display: block;
+  /*css inherit 부모요소 해당 속성 계산된 값 받아옴 */
+  font: inherit;
+  /* == font: normal 1rem "Fira Sans", sans-serifs; */
+
+  background-color: rgb(111, 178, 249);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(111, 178, 249);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer; /*마우스 올렸을 때 선택하는 손가락커서모양 */
+}
+
+button:hover {
+  background-color: rgb(159, 199, 251);
+  border-color: rgb(159, 199, 251);
 }
