@@ -3,11 +3,22 @@ body {
   margin: 8rem;
 }
 
+form {
+  width: 30rem;
+  margin: 3rem auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
 input {
-  width: 20rem;
+  width: 100%;
   display: block;
   margin-bottom: 1rem;
+  box-sizing: border-box;
+  /*box-sizing 종류 중 content-box로 하면 width크기가 안에 콘텐츠까지, width크기가 전체 크기까지 영향*/
 }
+
 button {
   display: block;
 }

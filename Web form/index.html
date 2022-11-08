@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 기본세팅 input, button은 인라인 요소임.-->
-    <!-- 입력란 만들기 / input은 빈태그(태그 1개만)/입력 타입 지정(자동으로 지정되어도 넣는 게 좋음)-->
-    <input type="text" />
-    <!-- 버튼칸 만들기-->
-    <button>Submit</button>
+    <!--form: 입력 양식임을 알려줌-->
+    <!--form 속성 
+        1.action: 요청이 보내져야 하는 URL주소와 통로 지정 
+        2.method: POST(서버해당데이터저장할때), GET(다른 페이지에 데이터 자원을 가져올때) 2가지 방식 존재-->
+    <form action="/" method="GET">
+      <!--label 사용용도: 입력원하는 데이터 명시/ 라벨 이름을 누르면 해당 id 입력칸으로 커서 이동 -->
+      <label for="username">Your name</label>
+      <input type="text" name="user-name" id="username" />
+      <button>Submit</button>
+    </form>
   </body>
 </html>
