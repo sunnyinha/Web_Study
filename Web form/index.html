@@ -12,77 +12,125 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form action="/" method="GET">
-      <!--다양한 input type 들-->
-      <label for="username">Your name</label>
-      <input type="text" name="user-name" id="username" />
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input type="text" name="user-name" id="username" />
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input type="password" name="user-password" id="userpassword" />
+            </li>
+          </ul>
+        </section>
 
-      <label for="uesrmessage">Your message</label>
-      <textarea name="user-message" id="usermessage"></textarea>
+        <section>
+          <h2>More details</h2>
 
-      <label for="useremail">Your email address</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="userage">Your age</label>
-      <input type="number" step="1" name="user-age" id="userage" />
-      <label for="userpassword">Your password</label>
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="userbirthdate">Your birthdate</label>
-      <input type="date" name="user-birthdate" id="userbirthdate" />
-      <!--주제 분리선-->
-      <hr />
-      <!--드랍다운: radio랑 비슷/name은 wrapper인 select에다가만 해주면 됨-->
-      <label for="favorite-color">Your favorite color?</label>
-      <select id="favorite-color" name="favorite-color">
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-      </select>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input type="number" step="1" name="user-age" id="userage" />
+            </li>
+            <li>
+              <label for="userbirthdate">Your birthdate</label>
+              <input type="date" name="user-birthdate" id="userbirthdate" />
+            </li>
+            <li>
+              <label for="favorite-color">Your favorite color?</label>
+              <select id="favorite-color" name="favorite-color">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+              </select>
+            </li>
+          </ul>
+        </section>
 
-      <h2>How should we verify your account?</h2>
-      <!--radio: name이 같은 여러개 중 1개 선택 가능-->
-      <!--div에다가 input 태그와 radio 태그 하나씩 넣은 이유: 라디오 체크 버튼, 내용 한줄에 볼 수 있도록 하려고-->
-      <div class="form-control-inline">
-        <input
-          type="radio"
-          name="verify"
-          id="verify-text-message"
-          value="text-message"
-        />
-        <label for="verify-text-message">Via text message (SMS)</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-phone" value="phone" />
-        <label for="verify-phone">Via a phone call</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">Via an email </label>
-      </div>
-      <!--checkbox : name이 같은 여러개 중 여러개 선택 가능-->
-      <div class="form-control-inline">
-        <input type="checkbox" id="agree-terms" name="terms" />
-        <label for="agree-terms">Agree to terms?</label>
-      </div>
-      <div class="form-control-inline">
-        <input
-          type="checkbox"
-          id="content-email"
-          name="contact"
-          value="email"
-        />
-        <label for="content-email">Contact me via email</label>
-      </div>
-      <div class="form-control-inline">
-        <input
-          type="checkbox"
-          id="content-phone"
-          name="contact"
-          value="phone"
-        />
-        <label for="content-phone">Contact me via phone</label>
-      </div>
+        <section>
+          <label for="uesrmessage">Your message</label>
+          <textarea name="user-message" id="usermessage"></textarea>
+        </section>
 
-      <button>Submit</button>
-    </form>
+        <section>
+          <h2>How should we verify your account?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-message"
+                value="text-message"
+              />
+              <label for="verify-text-message">Via text message (SMS)</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+              />
+              <label for="verify-phone">Via a phone call</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+              />
+              <label for="verify-email">Via an email </label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we contact you?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="content-email"
+                name="contact"
+                value="email"
+              />
+              <label for="content-email">Contact me via email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="content-phone"
+                name="contact"
+                value="phone"
+              />
+              <label for="content-phone">Contact me via phone</label>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" />
+            <label for="agree-terms">Agree to terms?</label>
+          </div>
+        </section>
+
+        <section>
+          <button>Submit</button>
+        </section>
+      </form>
+    </main>
   </body>
 </html>

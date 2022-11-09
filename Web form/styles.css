@@ -2,6 +2,18 @@ body {
   background-color: rgb(31, 30, 30);
   font-family: "Fira Sans", sans-serif;
 }
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 form {
   width: 30rem;
   margin: 3rem auto;
@@ -50,7 +62,6 @@ button:hover {
   border-color: rgb(159, 199, 251);
 }
 
-/**flex처리하고 width: auto로 설정하여 한줄에 배치**/
 .form-control-inline {
   display: flex;
 }
