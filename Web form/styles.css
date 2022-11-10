@@ -40,6 +40,10 @@ select {
   color: rgb(81, 79, 79);
 }
 
+textarea {
+  resize: none; /**textarea 핸들 잡고 크기 변경 x**/
+}
+
 input:focus,
 textarea:focus {
   background-color: rgb(221, 234, 248);

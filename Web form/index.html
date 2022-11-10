@@ -16,15 +16,20 @@
       <h1>Demo Form</h1>
     </header>
     <main>
-      <!-- novalidate 속성 : 유효성 검사 모두 건너뜀(해킹할 때 좋을..ㄷ)-->
       <form action="/" method="GET">
         <section>
           <h2>Your personal details</h2>
           <ul>
             <li>
               <label for="username">Your name</label>
-              <!--required: 무언가 입력받는 것이 있다는 걸 검사-->
-              <input type="text" name="user-name" id="username" required />
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                required
+                placeholder="Sunny"
+              />
+              <!-- place holder : 입력 전 기본 세팅(값으로 인지 x, 입력에 대한 힌트) -->
             </li>
             <li>
               <label for="useremail">Your email address</label>
@@ -39,7 +44,6 @@
                 required
                 minlength="7"
               />
-              <!-- 비밀번호 길이 유효성 검사-->
             </li>
           </ul>
         </section>
@@ -59,7 +63,6 @@
                 min="18"
                 max="100"
               />
-              <!-- 나이 유효성 검사-->
             </li>
             <li>
               <label for="userbirthdate">Your birthdate</label>
@@ -71,7 +74,6 @@
                 min="1921-01-01"
                 max="2003-01-01"
               />
-              <!-- 날짜 유효성 검사-->
             </li>
             <li>
               <label for="favorite-color">Your favorite color?</label>
@@ -86,7 +88,13 @@
 
         <section>
           <label for="uesrmessage">Your message</label>
-          <textarea name="user-message" id="usermessage"></textarea>
+          <textarea
+            name="user-message"
+            id="usermessage"
+            required
+            rows="8"
+          ></textarea>
+          <!--textarea 디폴트 줄 수 설정 가능-->
         </section>
 
         <section>
@@ -100,7 +108,6 @@
                 value="text-message"
                 required
               />
-              <!--radio 버튼 선택 유효성 검사: 선택사항 radio 모두 required 해주기-->
               <label for="verify-text-message">Via text message (SMS)</label>
             </li>
             <li class="form-control-inline">
