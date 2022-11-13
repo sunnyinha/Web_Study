@@ -1,54 +1,108 @@
 body {
+  font-family: Fira Sans, sans-serif; /*폰트 신경 쓰기 */
   background-color: rgb(222, 252, 243);
 }
 h1 {
-  align-items: center;
+  text-align: center; /*align-items은 flex와 같이 아이템이 있을 때 정렬임! 헷갈리지 말기*/
+  margin: 2rem; /*제목과 내용 사이에 여백 두는 게 보기 좋음*/
 }
 
-h2 {
-  margin: 3rem 1.5rem;
-}
-main {
+/*main는 요소 개요에 영향을 주지 않음. 정보 제공용이라 속성 넣기에 
+적절하지 않음.(실제로도 내용이 반영이 안되었음 )*/
+/* main {
   width: 100%;
   background-color: rgb(205, 217, 240);
+} */
+
+/*form은 정보 제공용이 아닌 실제 페이지 반영 되므로 내용 적용 가능*/
+form {
+  width: 40rem;
+  margin: auto;
+  background-color: rgb(240, 244, 251);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
-li {
-  list-style: none;
+section {
+  margin-bottom: 1rem;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  color: rgb(36, 36, 81);
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
 input,
 textarea,
 select {
+  font: inherit;
+  padding: 0.5rem;
+  border: 1px solid rgb(107, 107, 110);
+  width: 100%;
   display: block;
-  margin-bottom: 2rem;
-  width: 60rem;
+  border-radius: 4px;
+  box-sizing: border-box; /*width가 margin, padding, border 포함하여 width 밖으로 탈출 x */
 }
 textarea {
   resize: none;
 }
-#radio,
-#checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-}
-button {
-  display: inline-flex;
-  justify-content: end;
-  flex-direction: row;
-  padding: 1rem;
-  margin: 6rem, 3rem;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
+
+input:focus,
+textarea:focus {
+  background-color: rgb(216, 216, 251);
 }
 
-#submit {
+button {
+  font: inherit;
+  border: 1px solid rgb(64, 64, 121);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*clear, submit 버튼 색 설정(재활용 가능성 보고 있다면 class로)*/
+.btn-filled {
   background-color: rgb(8, 16, 102);
   color: rgb(255, 255, 255);
 }
-button:hover {
-  background-color: rgb(79, 80, 95);
-  color: rgb(93, 147, 163);
+
+.btn-empty {
+  background-color: transparent;
+  color: rgb(8, 16, 102);
+}
+/*clear, submit 마우스 올렸을 때 색 설정*/
+.btn-filled:hover {
+  background-color: rgb(64, 64, 121);
+  border-color: rgb(64, 64, 121);
+}
+.btn-empty:hover {
+  background-color: rgb(223, 223, 234);
+}
+
+/*flex 설정 이유: 축 기준 정렬(안하면 버튼과 라벨이 따른 축 상에 있음)*/
+.inline-control {
+  display: flex;
+}
+.inline-control label {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+/* auto로 설정안할 경우 크기도 크고 margin도 이상함..
+브라우저 설정이라 잘은 모르겠는데 아마 같은 축에 있는 요소
+크기 기준으로 넓이 설정 해준 듯함.*/
+.inline-control input {
+  width: auto;
+}
+
+/*버튼 정렬도 text-align으로(align-items 아님!! 주의)*/
+#button-align {
+  text-align: right;
 }

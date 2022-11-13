@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&family=Outfit:wght@700&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>form challenge</title>
   </head>
@@ -12,7 +16,7 @@
       <h1>Contact Us</h1>
     </header>
     <main>
-      <form action="/" method="GET">
+      <form action="/Web form challenge/" method="GET">
         <section>
           <h2>How can we help you?</h2>
           <ul>
@@ -26,43 +30,86 @@
             </li>
             <li>
               <label for="phonenumber">Your Phone Number</label>
+              <!-- type :number 말고 tel 사용(옆에 증가 바 없음)-->
               <input
-                type="number"
+                type="tel"
                 id="phonenumber"
                 name="phonenumber"
                 required
+                minlength="5"
               />
             </li>
             <li>
-              <label for="Message">Your Message</label>
-              <textarea required rows="6"> </textarea>
-            </li>
-            <li>
-              <label for="find">How did you find us?</label>
-              <select name="find" id="find">
-                <option value="web">look at Website</option>
-                <option value="friend">talk to people</option>
-                <option vlaue="tv">TV advertise</option>
-              </select>
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="6"
+                minlength="10"
+                maxlength="200"
+                required
+              >
+              </textarea>
             </li>
           </ul>
         </section>
+        <section>
+          <!-- 개인 정보 영역이 아니라 section 분리-->
+          <label for="find">How did you find us?</label>
+          <select name="find" id="find" required>
+            <option value="web">Search Website</option>
+            <option value="mouth">Word of Mouth</option>
+            <option vlaue="tv">TV advertise</option>
+            <option vlaue="other">Other</option>
+          </select>
+        </section>
         <section id="radio">
           <h2>How should we reply?</h2>
-          <input type="radio" id="call" name="reply" required />
-          <label for="call"> Call me</label>
-          <input type="radio" id="Send" name="reply" required />
-          <label for="Send"> Send me an email</label>
-          <input type="radio" id="Don't" name="reply" required />
-          <label for="Don't"> Don't reply</label>
+          <!--ul, li 태그로 분류하면 input, label을 하나의 block으로 처리가능 정렬 시 용이-->
+          <ul>
+            <li class="inline-control">
+              <!-- 서버로 보낼 값 value 설정해주기(안주면 선택해도 보낼 값이 없어서 의미가 없음)-->
+              <!-- id 설정할 때 name 이름 앞에 적어주면 radio의 요소인 느낌까지 줄 수 있어서 좋은듯-->
+              <input
+                type="radio"
+                id="reply-call"
+                name="reply"
+                value="phone"
+                required
+              />
+              <label for="reply-call"> Call me</label>
+            </li>
+            <li class="inline-control">
+              <input
+                type="radio"
+                id="reply-Send"
+                name="reply"
+                value="email"
+                required
+              />
+              <label for="reply-Send"> Send me an email</label>
+            </li>
+            <li class="inline-control">
+              <input
+                type="radio"
+                id="reply-none"
+                name="reply"
+                value="none"
+                required
+              />
+              <label for="reply-none"> Don't reply</label>
+            </li>
+          </ul>
         </section>
-        <section id="checkbox">
-          <input type="checkbox" id="check" />
+        <section class="inline-control">
+          <input type="checkbox" id="check" name="check" required />
           <label for="check">Accept Terms</label>
         </section>
-        <section>
-          <button form="clear" class="button">Clear</button>
-          <button form="submit" id="submit" class="button">Submit</button>
+        <section id="button-align">
+          <!--button의 역할 설정 시 form 아니라 type임..-->
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
         </section>
       </form>
     </main>
