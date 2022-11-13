@@ -5,26 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Introduction</title>
-    <script>
-      // js: 끝에 ; 으로 코드 끝 표기(필수 x /여러줄 한줄로 쓰기 가능->추천x)
-      //alert : 경고창 표시 지시 함수
-
-      //변수 : 중복시 수정 용이
-      //지역 변수 선언: 키워드 let 사용
-      //변수명 규칙//
-      //1. 특수 문자 사용금지($,_는 허용, -,/,; 등등 불가능)
-      //2. 하나의 단어여야 함(공백x)
-      //3. 소문자로 시작(관례)
-      //4. 주로 카멜표기법 사용 (단어가 더 있다면 뒤의 단어는 대문자 시작)
-      let greetingText;
-      let age;
-      greetingText = "Hi, I'm Sunny!";
-      alert(greetingText);
-      greetingText = "Nice to meet you!";
-      alert(greetingText);
-      age = 32;
-      alert(age);
-    </script>
+    <!-- script 파일 분리 후 html과 연결할 때
+        link 안쓰고 script에 src 속성을 달아서 넣어준다.
+        여는 태그와 닫는 태그 사이에 코드가 들어가면 안된다.-->
+    <script src="app.js"></script>
   </head>
   <body></body>
 </html>
