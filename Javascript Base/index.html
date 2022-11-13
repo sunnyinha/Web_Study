@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Introduction</title>
     <script>
-      /////// 값 표현 ////////
-      //1. 문자열 표현
-      //따옴표(큰거 작은거 상관x, 일관성 있게) 사용
-      //따옴표와 같은 특수문자는 이스케이프 문자를 통해 표현 가능
-      alert("Hi, I'm Sunny!");
-      //2. 숫자 표현
-      // 숫자 적으면 됨.
-      alert(32);
+      // js: 끝에 ; 으로 코드 끝 표기(필수 x /여러줄 한줄로 쓰기 가능->추천x)
+      //alert : 경고창 표시 지시 함수
+
+      //변수 : 중복시 수정 용이
+      //지역 변수 선언: 키워드 let 사용
+      //변수명 규칙//
+      //1. 특수 문자 사용금지($,_는 허용, -,/,; 등등 불가능)
+      //2. 하나의 단어여야 함(공백x)
+      //3. 소문자로 시작(관례)
+      //4. 주로 카멜표기법 사용 (단어가 더 있다면 뒤의 단어는 대문자 시작)
+      let greetingText;
+      let age;
+      greetingText = "Hi, I'm Sunny!";
+      alert(greetingText);
+      greetingText = "Nice to meet you!";
+      alert(greetingText);
+      age = 32;
+      alert(age);
     </script>
   </head>
   <body></body>
