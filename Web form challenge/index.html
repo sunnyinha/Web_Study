@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>form challenge</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required />
+            </li>
+            <li>
+              <label for="email">Your E-Mail Address</label>
+              <input type="email" id="email" name="email" required />
+            </li>
+            <li>
+              <label for="phonenumber">Your Phone Number</label>
+              <input
+                type="number"
+                id="phonenumber"
+                name="phonenumber"
+                required
+              />
+            </li>
+            <li>
+              <label for="Message">Your Message</label>
+              <textarea required rows="6"> </textarea>
+            </li>
+            <li>
+              <label for="find">How did you find us?</label>
+              <select name="find" id="find">
+                <option value="web">look at Website</option>
+                <option value="friend">talk to people</option>
+                <option vlaue="tv">TV advertise</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section id="radio">
+          <h2>How should we reply?</h2>
+          <input type="radio" id="call" name="reply" required />
+          <label for="call"> Call me</label>
+          <input type="radio" id="Send" name="reply" required />
+          <label for="Send"> Send me an email</label>
+          <input type="radio" id="Don't" name="reply" required />
+          <label for="Don't"> Don't reply</label>
+        </section>
+        <section id="checkbox">
+          <input type="checkbox" id="check" />
+          <label for="check">Accept Terms</label>
+        </section>
+        <section>
+          <button form="clear" class="button">Clear</button>
+          <button form="submit" id="submit" class="button">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
