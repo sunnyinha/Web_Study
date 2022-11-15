@@ -10,22 +10,23 @@
 //    - A variable that stores the three main goals that you have, when taking this course
 let name = "Web online Course";
 let price = 1000;
-//배열 만들 때 대괄호 쓰기 (중괄호 아님)
 let goal = ["making my website", "making readable code", "Having Fun"];
 
 // 2) Output ("alert") the three variable values
 alert(name);
 alert(price);
-alert(goal[0]);
-alert(goal[1]);
-alert(goal[2]);
+alert(goal); // 배열 이름으로 전체 출력 가능
+
 // 3) Try "grouping" the three variables together and still output their values thereafter
-// 객체 생성 할때 값을 넣어줘야 하니까 = 쓰는 거 까먹지 말기
 let grouping = {
   name: "Web online Course",
   price: 1000,
   goal: ["making my website", "making readable code", "Having Fun"],
 };
+
+alert(grouping.name);
+alert(grouping.price);
+alert(grouping.goal);
 // 4) Also output the second element in your "main goals" variable
 alert(grouping.goal[1]);
 // 5) Add a custom command that does the following:
@@ -35,9 +36,10 @@ alert(grouping.goal[1]);
 //    - The "main goals" variable should also be dynamic: The command should work
 //      with ANY list of values
 //    - The custom command should provide the accessed value (i.e. the list element)
-function AccessGoal(g, th) {
-  return g[th];
+function AccessGoal(array, arrayIndex) {
+  let arrayElement = array[arrayIndex];
+  return arrayElement;
 }
-
 // 6) Execute your custom command from (5) and output ("alert") the result
-alert(AccessGoal(grouping.goal, 2));
+let firstGoal = AccessGoal(grouping.goal, 0);
+alert(firstGoal);
