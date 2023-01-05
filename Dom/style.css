@@ -59,6 +59,8 @@ button:hover {
   color: rgb(105, 101, 75);
 }
 
+/*warning 클래스가 적용된 입력요소를 모두 선택*/
+/*input .warning 으로 입력시 입력의 자식 또는 하위 요소인 warning 클래스가 있는 모든 요소를 선택*/
 input.warning {
   background-color: rgb(248, 191, 145);
 }
