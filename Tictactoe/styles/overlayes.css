@@ -1,0 +1,33 @@
+/*사용자 정보 인풋 box*/
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /**/
+  display: none;
+}
+
+#backdrop {
+  position: fixed;
+  /*화면 전체가 어둡게 오버레이 되도록
+  top, left 0에서 시작 , 너비, 높이 100%*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .modal {
+    /*calc()를 이용하면 css 속성 값 계산식 지정가능*/
+    left: calc(50%-20rem);
+    width: 40rem;
+  }
+}
