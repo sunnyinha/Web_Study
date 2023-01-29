@@ -2,7 +2,7 @@
 #active-game {
   text-align: center;
   margin: 2rem 0 5rem 0;
-  /* display: none; */
+  display: none;
 }
 /*게임 결과 창*/
 #game-over {
@@ -58,5 +58,5 @@
 #game-board li.disabled {
   background-color: rgb(112, 13, 204);
   color: aliceblue;
-  cursor: default; /*커서 없애기*/
+  cursor: default; /*화살표 기본값*/
 }
