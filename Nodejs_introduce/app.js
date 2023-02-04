@@ -1,10 +1,15 @@
 //node js 내장 모듈 http 불러오기
 const http = require("http");
 
-function handleRequest(requset, response) {
-  //statusCode : 요청 성공 여부
-  response.statusCode = 200;
-  //응답 준비 끝
+function handleRequest(request, response) {
+  // localhost:3000/currenttime 직접 입력
+  if (request.url === "/currenttime") {
+    response.statusCode = 200;
+    // 현재 날짜/시간 리턴 / toISOString() zero-UTC timezone으로 리턴
+    response.end("<h1>" + new Date().toISOString() + "</h1>");
+  }
+  //defalt 실행(/)
+  else if (request.url === "/") response.statusCode = 200;
   response.end("<h1>Hello World!</h1>");
 }
 
