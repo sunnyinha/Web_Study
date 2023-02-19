@@ -3,6 +3,8 @@ const path = require("path");
 const express = require("express");
 
 const app = express();
+//set static file
+app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   const htmlFilePath = path.join(__dirname, "views", "index.html");
