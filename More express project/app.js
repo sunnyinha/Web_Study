@@ -5,7 +5,6 @@ const express = require("express");
 
 const app = express();
 
-//ejs 탬플릿 엔진을 통한 코드 간략화
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -22,7 +21,10 @@ app.get("/restaurants", function (req, res) {
   const fileData = fs.readFileSync(filePath);
   const storedRestaurants = JSON.parse(fileData);
 
-  res.render("restaurants", { numberOfRestaurants: storedRestaurants.length });
+  res.render("restaurants", {
+    numberOfRestaurants: storedRestaurants.length,
+    restaurants: storedRestaurants,
+  });
 });
 
 app.get("/recommend", function (req, res) {
