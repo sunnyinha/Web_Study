@@ -27,6 +27,14 @@ app.get("/restaurants", function (req, res) {
   });
 });
 
+//동적 경로(dynamic routes) 접근
+app.get("/restaurants/:id", function (req, res) {
+  // id 받아와서 변수에 저장
+  const restaurantid = req.params.id;
+  // 다른 페이지에 변수 전달
+  res.render("restaurant-detail", { rid: restaurantid });
+});
+
 app.get("/recommend", function (req, res) {
   res.render("recommend");
 });
