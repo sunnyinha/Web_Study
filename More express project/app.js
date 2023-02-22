@@ -1,7 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
+//npm 설치 후 package 사용 표시
 const express = require("express");
+const uuid = require("uuid");
 
 const app = express();
 
@@ -41,6 +43,8 @@ app.get("/recommend", function (req, res) {
 
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
+  //고유 id 생성
+  restaurant.id = uuid.v4();
   const filePath = path.join(__dirname, "data", "restaurants.json");
 
   const fileData = fs.readFileSync(filePath);
