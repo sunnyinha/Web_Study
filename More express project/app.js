@@ -29,12 +29,21 @@ app.get("/restaurants", function (req, res) {
   });
 });
 
-//동적 경로(dynamic routes) 접근
 app.get("/restaurants/:id", function (req, res) {
-  // id 받아와서 변수에 저장
   const restaurantid = req.params.id;
-  // 다른 페이지에 변수 전달
-  res.render("restaurant-detail", { rid: restaurantid });
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  for (const restaurant of storedRestaurants) {
+    // 일치하는 아이디가 있을 때 데이터 렌더러하기
+    if (restaurant.id === restaurantid) {
+      return res.render("restaurant-detail", { restaurant: restaurant });
+    }
+  }
+  //일치하는 아이디가 없으면 404.ejs 페이지 렌더러하기
+  res.render("404");
 });
 
 app.get("/recommend", function (req, res) {
@@ -64,5 +73,12 @@ app.get("/confirm", function (req, res) {
 app.get("/about", function (req, res) {
   res.render("about");
 });
-
+// 다른 미들웨어 처리가 없다면 404 에러 처리
+app.use(function (req, res) {
+  res.status(404).render("404");
+});
+// 서버 응답 에러(json 파일 인식 오류 등)처리
+app.use(function (error, req, res, next) {
+  res.status(500).render("500");
+});
 app.listen(3000);
